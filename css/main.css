@@ -1,0 +1,216 @@
+.gigantic, .huge, .large, .bigger, .big,
+h1, h2, h3, h4, h5, h6 {
+  color: #2E2D33;
+  font-weight: bold; }
+
+.gigantic {
+  font-size: 110px;
+  line-height: 1.09;
+  letter-spacing: -2px; }
+
+.huge, h1 {
+  font-size: 68px;
+  line-height: 1.05;
+  letter-spacing: -1px; }
+
+.large, h2 {
+  font-size: 42px;
+  line-height: 1.14; }
+
+.bigger, h3 {
+  font-size: 26px;
+  line-height: 1.38; }
+
+.big, h4 {
+  font-size: 22px;
+  line-height: 1.38; }
+
+.small, small {
+  font-size: 10px;
+  line-height: 1.2; }
+
+p {
+  margin: 0 0 20px 0; }
+
+em {
+  font-style: italic; }
+
+strong {
+  font-weight: bold; }
+
+hr {
+  border: solid #ddd;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 10px 0 30px;
+  height: 0; }
+
+a {
+  color: #2E2D33;
+  text-decoration: none;
+  outline: 0; }
+
+a:hover, a:focus {
+  color: #5f5d69; }
+
+::-moz-selection {
+  background: #FFF498; }
+
+::selection {
+  background: #FFF498; }
+
+::-moz-selection {
+  background: #FFF498; }
+
+img::-moz-selection {
+  background: transparent; }
+
+img::selection {
+  background: transparent; }
+
+img::-moz-selection {
+  background: transparent; }
+
+body {
+  -webkit-tap-highlight-color: #FFF498; }
+
+body {
+  font-size: 14px;
+  line-height: 1.6;
+  font-family: 'Oswald' sans-serif;
+  color: #2E2D33;
+  -webkit-font-smoothing: antialiased; }
+
+body {
+  background: #f6f6c4;
+  overflow: hidden; }
+
+h1 {
+  margin: 0;
+  padding: 1em 0 0;
+  color: #f6f6c4; }
+
+h2 {
+  color: black;
+  font-weight: 300;
+  font-size: 28px; }
+
+article {
+  background-color: #d73737;
+  height: 406px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 180px;
+  margin-bottom: 150px;
+  width: 100%;
+  z-index: 1; }
+
+.spinner-wrap {
+  display: block;
+  width: 327px;
+  height: 327px;
+  position: relative;
+  left: 50%;
+  margin-left: -163px;
+  top: 0;
+  top: 19px;
+  margin-top: 5vh; }
+  .spinner-wrap * {
+    cursor: pointer; }
+  .spinner-wrap.pulse {
+    -moz-animation: pulse 0.5s linear infinite;
+    -webkit-animation: pulse 0.5s linear infinite; }
+
+.spinner-outer {
+  display: block;
+  width: 327px;
+  height: 327px;
+  position: absolute;
+  left: 50%;
+  margin-left: -163px;
+  border-radius: 50%;
+  background: url(../images/spinner-outer.svg) center center no-repeat #32302e; }
+  .playing .spinner-outer {
+    -moz-animation: spin-cw 5s infinite linear;
+    -webkit-animation: spin-cw 5s infinite linear; }
+
+.spinner-center {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  background: url(../images/spinner-center.svg) center center no-repeat;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  margin: -99px;
+  pointer-events: none; }
+  .playing .spinner-center {
+    -moz-animation: spin-ccw 5s infinite linear;
+    -webkit-animation: spin-ccw 5s infinite linear; }
+
+.play-sprite {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -35px 0 0 -35px;
+  height: 70px;
+  width: 70px;
+  background: url(../images/play-sprite.svg) 0px 0px no-repeat; }
+  .playing .play-sprite {
+    background-position: 0px -70px; }
+
+#mp3-player {
+  width: 500px;
+  height: 100px;
+  background: none;
+  padding: 5px;
+  margin: 100px auto; }
+  #mp3-player > div > audio {
+    width: 500px;
+    background: none;
+    float: left; }
+  #mp3-player > canvas {
+    width: 500px;
+    height: 100px;
+    background: #d73737;
+    float: left; }
+
+#control-panel {
+  display: inline-block;
+  margin-top: 100px; }
+
+@-moz-keyframes spin-cw {
+  0% {
+    -moz-transform: rotate(0deg); }
+  100% {
+    -moz-transform: rotate(360deg); } }
+
+@-webkit-keyframes spin-cw {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg); } }
+
+@-moz-keyframes spin-ccw {
+  0% {
+    -moz-transform: rotate(0deg); }
+  100% {
+    -moz-transform: rotate(-360deg); } }
+
+@-webkit-keyframes spin-ccw {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(-360deg); } }
+
+@-moz-keyframes pulse {
+  0% {
+    -moz-transform: rotate(1.3); }
+  100% {
+    -moz-transform: rotate(1); } }
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1.3); }
+  100% {
+    -webkit-transform: scale(1); } }
